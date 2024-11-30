@@ -112,7 +112,7 @@ A newly created mod. <!-- FIX: Insert a short description here. -->
 	
 	<!-- Access these keys using the ModKeys class. -->
 	<Keys>
-		<Key name="UIKey" defaultModifier="LeftAlt" defaultTrigger="L" />
+        
 	</Keys>
 	
 	<!-- The mod loader will automatically make all resources listed here available

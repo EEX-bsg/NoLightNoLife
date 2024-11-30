@@ -56,18 +56,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnvironmentSettingUI.cs" />
     <Compile Include="LaungageManager.cs" />
     <Compile Include="LightController.cs" />
     <Compile Include="LightVisController.cs" />
-    <Compile Include="MainLightSettings.cs" />
-    <Compile Include="MenuSelectorController.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SunShafts\LightShafts.cs" />
     <Compile Include="SunShafts\LightShafts.Resources.cs" />
     <Compile Include="SunShafts\LightShafts.Utils.cs" />
-    <Compile Include="WarningUI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -12,13 +12,10 @@ namespace NLNL
         public static MessageType TranslateType;
         public static AssetBundle LightShaftsShadersAsset;
         public static readonly string Name = "NoLightNoLife";
-        public static readonly Guid UIFactoryGUID = new Guid("61d89dcf-88a2-4a16-8eb2-08aeed441f1d");
-        public static bool isUIFactory = false;
 
 		public override void OnLoad()
 		{
             UnityEngine.Object.DontDestroyOnLoad(NLNLController = new GameObject("NLNLContoroller"));
-            isUIFactory = Mods.IsModLoaded(UIFactoryGUID);
             TranslateType = ModNetworking.CreateMessageType(DataType.Entity, DataType.Vector3, DataType.Vector3);
             ModNetworking.Callbacks[TranslateType] += (Action<Message>)delegate (Message msg)
             {
@@ -30,15 +27,6 @@ namespace NLNL
                 entity.GameObject.transform.rotation = Quaternion.Euler(euler);
             };
             LoadAssetBundle();
-            if (isUIFactory)
-            {
-                NLNLController.AddComponent<EnvironmentSettingUI>();
-            }
-            else
-            {
-                NLNLController.AddComponent<WarningUI>();
-            }
-            Debug.Log(NLNLController);
         }
 
         public override void OnEntityPrefabCreation(int entityId, GameObject prefab)
