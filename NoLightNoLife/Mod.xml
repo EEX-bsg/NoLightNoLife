@@ -8,9 +8,9 @@
 A newly created mod.
     </Description>
 
-    <!-- <Icon name="icon" /> -->
+    <Icon name="icon" />
 
-    <!-- <WorkshopThumbnail name="thumbnail" /> -->
+    <WorkshopThumbnail name="thumb" />
 
     <Debug>true</Debug>
 
@@ -25,6 +25,8 @@ A newly created mod.
     </Entities>
 
     <Resources>
+        <Texture name="icon" path="icon.png" />
+        <Texture name="thumb" path="thumb.png" />
         <Texture name="lightbulb_icon" path="lightbulb_icon.png" />
         <Texture name="lightbulb_tex" path="lightbulb_tex.png" />
         <Mesh name="cube" path="cube.obj" />
