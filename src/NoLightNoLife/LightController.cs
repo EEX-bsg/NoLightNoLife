@@ -135,6 +135,13 @@ namespace NLNL
             // AttenuationCurve.ValueChanged += AttenuationCurve_ValueChange;
             Type_ValueChanged(0);
             Range_ValueChanged(0);
+
+            LightShafts.m_Size = new Vector3(VolumeSizeX.Value, VolumeSizeY.Value, VolumeSizeZ.Value);
+            LightShafts.m_SpotNear = VolumeStart.Value;
+            LightShafts.m_SpotFar = VolumeEnd.Value;
+            LightShafts.m_Brightness = Brightness.Value;
+            LightShafts.m_Extinction = Attenuation.Value;
+            LightShafts.UpdateLUTs();
         }
 
         void Update()
