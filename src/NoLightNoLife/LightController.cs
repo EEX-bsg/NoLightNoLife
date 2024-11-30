@@ -175,6 +175,12 @@ namespace NLNL
             }
         }
 
+        void OnDestroy()
+        {
+            Destroy(lightVisual);
+            lightVisual = null;
+        }
+
         private void GenerateGUI()
         {
             Type = GenericEntity.AddMenu("NL2-type", 0, LightTypesList, false);
