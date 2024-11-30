@@ -1,18 +1,18 @@
 <Mod>
     <Name>NoLightNoLife</Name>
     <Author>EEX-slime</Author>
-    <Version>0.0.1</Version>
+    <Version>1.0.0</Version>
     <LoadOrder>0</LoadOrder>
 
     <Description>
-A newly created mod.
+Add Light Object in LevelEditor.
     </Description>
 
     <Icon name="icon" />
 
     <WorkshopThumbnail name="thumb" />
 
-    <Debug>true</Debug>
+    <Debug>false</Debug>
 
     <MultiplayerCompatible>true</MultiplayerCompatible>
 
