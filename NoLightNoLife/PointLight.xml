@@ -10,7 +10,7 @@
 		 See the documentation for further information on any of these elements.
 	-->
 	
-	<Name>PointLight</Name>
+	<Name>Light</Name>
 	<!-- ID of your entity. This ID must be unique among the entities that your mod adds.
 		 (It can conflict with other mods, the mod loader will handle this.)
 		 The easiest way of handling IDs is to just give your entities the IDs 1, 2, 3, etc. -->
