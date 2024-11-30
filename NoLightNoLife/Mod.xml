@@ -1,0 +1,41 @@
+<Mod>
+    <Name>NoLightNoLife</Name>
+    <Author>EEX-slime</Author>
+    <Version>1.0.0</Version>
+    <LoadOrder>0</LoadOrder>
+
+    <Description>
+Add Light Object in LevelEditor.
+    </Description>
+
+    <Icon name="icon" />
+
+    <WorkshopThumbnail name="thumb" />
+
+    <Debug>false</Debug>
+
+    <MultiplayerCompatible>true</MultiplayerCompatible>
+
+    <Assemblies>
+        <Assembly path="NoLightNoLife.dll" />
+    </Assemblies>
+
+    <Entities>
+        <Entity path="PointLight.xml" />
+    </Entities>
+
+    <Resources>
+        <Texture name="icon" path="icon.png" />
+        <Texture name="thumb" path="thumb.png" />
+        <Texture name="lightbulb_icon" path="lightbulb_icon.png" />
+        <Texture name="lightbulb_tex" path="lightbulb_tex.png" />
+        <Mesh name="cube" path="cube.obj" />
+        <Texture name="white_tex" path="white.png" />
+        <AssetBundle name="LightShaftsShadersWin" path="Assets/LightShaftsShaders" />
+    </Resources>
+
+
+    <!-- This value is automatically generated. Do not change it or you may break machine&level save files. -->
+    <ID>7019cd03-6699-4a79-9da8-a8b049876a67</ID>
+
+</Mod>

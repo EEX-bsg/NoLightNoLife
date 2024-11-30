@@ -1,0 +1,35 @@
+<Entity>
+    <Name>Light</Name>
+
+    <ID>1</ID>
+
+    <Debug>false</Debug>
+
+    <Fallback>Trigger</Fallback>
+
+    <Mesh name="cube">
+        <Position x="0.0" y="0.0" z="0.0" />
+        <Rotation x="0.0" y="0.0" z="0.0" />
+        <Scale x="0.0001" y="0.0001" z="0.0001" />
+    </Mesh>
+
+    <Texture name="white_tex" />
+
+    <Icon name="lightbulb_icon" />
+
+    <Category>Virtual</Category>
+
+    <Offset x="0.0" y="1.2" z="0.0" />
+
+    <Colliders>
+        <SphereCollider>
+            <Position x="0.0" y="0.0" z="0.0" />
+            <Radius>1.0</Radius>
+        </SphereCollider>
+    </Colliders>
+
+    <CanPick>false</CanPick>
+
+    <ShowPhysicsToggle>false</ShowPhysicsToggle>
+
+</Entity>
