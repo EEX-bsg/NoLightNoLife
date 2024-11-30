@@ -64,3 +64,6 @@ crashlytics-build.properties
 #
 Properties/
 *.manifest
+
+.vscode
+/NoLightNoLife/*.dll
