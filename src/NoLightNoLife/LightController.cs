@@ -454,7 +454,7 @@ namespace NLNL
             lightVisual.transform.position = transform.position;
             lightVisual.transform.SetParent(transform);
 
-            GameObject windHideOnPlay = GameObject.Find("_PERSISTENT/OBJECTS/Prefabs/Weather/Wind/Obj/HideOnPlay");
+            GameObject windHideOnPlay = GameObject.Find("_PERSISTENT/OBJECTS/Prefabs/Virtual/Wind/Obj/HideOnPlay");
             selectVisual = Instantiate(windHideOnPlay);
             selectVisual.transform.SetParent(transform);
             selectVisual.transform.position = transform.position;
