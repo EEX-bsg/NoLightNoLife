@@ -124,6 +124,7 @@ A newly created mod. <!-- FIX: Insert a short description here. -->
 		<Texture name="lightbulb_icon" path="lightbulb_icon.png" />
 		<Texture name="lightbulb_tex" path="lightbulb_tex.png" />
 		<Mesh name="none" path="none.obj" />
+        <Mesh name="cube" path="cube.obj" />
 		<Mesh name="wire_sphere" path="WireSphere.obj" />
 		<Texture name="white_tex" path="white.png" />
 		<Texture name="WIPsign" path="WIPsign.png" />

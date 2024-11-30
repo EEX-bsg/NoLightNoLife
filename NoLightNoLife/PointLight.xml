@@ -28,10 +28,10 @@
 		 Only normal entities can be specified as fallbacks, not modded entities.-->
 	<Fallback>Trigger</Fallback>
 	
-	<Mesh name="none"> <!-- Must be defined as a resource in the manifest. -->
+	<Mesh name="cube"> <!-- Must be defined as a resource in the manifest. -->
 		<Position x="0.0" y="0.0" z="0.0" />
 		<Rotation x="0.0" y="0.0" z="0.0" />
-		<Scale x="1.0" y="1.0" z="1.0" />
+		<Scale x="0.0001" y="0.0001" z="0.0001" />
 	</Mesh>
 	
 	<Texture name="white_tex" /> <!-- Must be defined as a resource in the manifest. -->
@@ -70,7 +70,7 @@
 	
 	<!-- Whether the entity can be picked in events that act on entities (e.g. Activate). -->
 	<!-- Optional, default is true -->
-	<!-- <CanPick>true</CanPick> -->
+	<CanPick>false</CanPick>
 
 	<!-- Whether to show the Physics toggle in the properties of the entity.
 		 Disable it, if your entity shouldn't/can't respond to any physics. -->
