@@ -14,9 +14,9 @@ namespace NLNL
         public GenericEntity GenericEntity;
         public Light LightComponent;
         public LightShafts LightShafts;
-        public static readonly List<string> LightTypesList= new List<string>() {"Point", "Spot", "Directional"};
-        public static readonly List<string> ShadowTypeList = new List<string>() { "No Shadow", "Soft Shadows", "Hard Shadows"};
-        public static readonly List<string> LightShaftsMenuList = new List<string>() { LaungageManager.LightEntity.LightShafts.LightSetting, LaungageManager.LightEntity.LightShafts.VolumeSize, LaungageManager.LightEntity.LightShafts.LightShaftsSetting};
+        public static readonly List<string> LightTypesList = new List<string>() { "Point", "Spot", "Directional" };
+        public static readonly List<string> ShadowTypeList = new List<string>() { "No Shadow", "Soft Shadows", "Hard Shadows" };
+        public static readonly List<string> LightShaftsMenuList = new List<string>() { LaungageManager.LightEntity.LightShafts.LightSetting, LaungageManager.LightEntity.LightShafts.VolumeSize, LaungageManager.LightEntity.LightShafts.LightShaftsSetting };
         public MMenu Type;
         public MValue Range;
         public MSlider SpotAngle;
@@ -50,11 +50,11 @@ namespace NLNL
             }
             set
             {
-                if(value < 0)
+                if (value < 0)
                 {
                     value = sendMessageCycle;
                 }
-                if(sendMessageCycle < value)
+                if (sendMessageCycle < value)
                 {
                     value = 0;
                 }
@@ -136,7 +136,7 @@ namespace NLNL
             Type_ValueChanged(0);
             Range_ValueChanged(0);
         }
-        
+
         void Update()
         {
             if (haveVisual)
@@ -169,7 +169,7 @@ namespace NLNL
         void FixedUpdate()
         {
             SendMessageTime++;
-            if(InSimulation && !StatMaster.isClient && SendMessageTime == 0)
+            if (InSimulation && !StatMaster.isClient && SendMessageTime == 0)
             {
                 ModNetworking.SendToAll(Mod.TranslateType.CreateMessage(Entity.From(base.gameObject), base.transform.position, base.transform.rotation.eulerAngles));
             }
@@ -179,9 +179,9 @@ namespace NLNL
         {
             Type = GenericEntity.AddMenu("NL2-type", 0, LightTypesList, false);
             Range = GenericEntity.AddValue(LaungageManager.LightEntity.Range, "NL2-range", 10.0f);
-            SpotAngle = GenericEntity.AddSlider(LaungageManager.LightEntity.SpotAngle, "NL2-spot-angle", 30.0f,  1f, 180f, "", "°");
+            SpotAngle = GenericEntity.AddSlider(LaungageManager.LightEntity.SpotAngle, "NL2-spot-angle", 30.0f, 1f, 180f, "", "°");
             LightColor = GenericEntity.AddColourSlider(LaungageManager.LightEntity.Color, "NL2-color", new Color(1.0f, 1.0f, 1.0f), false);
-            Intensity = GenericEntity.AddSlider(LaungageManager.LightEntity.Intensity,"NL2-intensity", 1, 0, 8, "", "");
+            Intensity = GenericEntity.AddSlider(LaungageManager.LightEntity.Intensity, "NL2-intensity", 1, 0, 8, "", "");
             BounceIntensity = GenericEntity.AddSlider(LaungageManager.LightEntity.BounceIntensity, "NL2-bounce-intensity", 1.0f, 0f, 8f, "", "");
             ShadowType = GenericEntity.AddMenu("NL2-shadow-type", 0, ShadowTypeList, false);
             UseLightShafts = GenericEntity.AddToggle(LaungageManager.LightEntity.LightShafts.useToggle, "NL2-use-lightshafts", false);
@@ -205,14 +205,14 @@ namespace NLNL
             LightComponent.range = Range.Value;
             gridSphere.transform.localScale = new Vector3(Range.Value, Range.Value, Range.Value);
             float val = Range.Value / 5 * (float)Math.Tan(SpotAngle.Value * Math.PI / 180d / 2d) * 2f;
-            gridCone.transform.localScale = new Vector3(val, val, Range.Value/5f);
-            gridCone.transform.localPosition = new Vector3(0f, 0f, Range.Value/5f);
+            gridCone.transform.localScale = new Vector3(val, val, Range.Value / 5f);
+            gridCone.transform.localPosition = new Vector3(0f, 0f, Range.Value / 5f);
         }
         private void SpotAngle_ValueChanged(float value)
         {
             LightComponent.spotAngle = SpotAngle.Value;
-            float val = Range.Value /5 * (float)Math.Tan(SpotAngle.Value * Math.PI / 180d / 2d) * 2f;
-            gridCone.transform.localScale = new Vector3(val, val, Range.Value/5);
+            float val = Range.Value / 5 * (float)Math.Tan(SpotAngle.Value * Math.PI / 180d / 2d) * 2f;
+            gridCone.transform.localScale = new Vector3(val, val, Range.Value / 5);
         }
         private void LightColor_ValueChanged(Color color)
         {

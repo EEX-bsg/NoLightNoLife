@@ -255,11 +255,11 @@ namespace NLNL
                         switch (CurrLangName)
                         {
                             case "日本語":
-                                //return "減衰";
+                            //return "減衰";
                             case "简体中文":
                             case "台灣繁體中文":
                             case "香港繁體中文":
-                                //return "衰减";
+                            //return "衰减";
                             case "English":
                             default:
                                 return "EaseInOut";
@@ -268,7 +268,7 @@ namespace NLNL
                 }
 
             }
-            
+
         }
     }
 }

@@ -6,15 +6,15 @@ using NLNL;
 
 namespace NLNL
 {
-	public class Mod : ModEntryPoint
-	{
+    public class Mod : ModEntryPoint
+    {
         public static GameObject NLNLController;
         public static MessageType TranslateType;
         public static AssetBundle LightShaftsShadersAsset;
         public static readonly string Name = "NoLightNoLife";
 
-		public override void OnLoad()
-		{
+        public override void OnLoad()
+        {
             UnityEngine.Object.DontDestroyOnLoad(NLNLController = new GameObject("NLNLContoroller"));
             TranslateType = ModNetworking.CreateMessageType(DataType.Entity, DataType.Vector3, DataType.Vector3);
             ModNetworking.Callbacks[TranslateType] += (Action<Message>)delegate (Message msg)
@@ -34,7 +34,7 @@ namespace NLNL
             switch (entityId)
             {
                 case 1:
-                    if(prefab.GetComponent<LightController>() == null)
+                    if (prefab.GetComponent<LightController>() == null)
                     {
                         prefab.AddComponent<LightController>();
                     }
@@ -45,7 +45,7 @@ namespace NLNL
         private void LoadAssetBundle()
         {
             if (LightShaftsShadersAsset != null) return;
-            if(Application.platform == RuntimePlatform.WindowsPlayer)
+            if (Application.platform == RuntimePlatform.WindowsPlayer)
             {
                 LightShaftsShadersAsset = ModResource.GetAssetBundle("LightShaftsShadersWin");
             }
@@ -54,5 +54,5 @@ namespace NLNL
                 LightShaftsShadersAsset = ModResource.GetAssetBundle("LightShaftsShadersMac");
             }
         }
-	}
+    }
 }
